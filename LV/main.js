@@ -5,7 +5,7 @@ const app = Vue.createApp({
             description: 'shoes can be worn by any gender',
             green: '../LV/green.jpg',
             img_descr: 'blue',
-            instock: 7
+            instock: 100
         }
     }
 })

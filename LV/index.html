@@ -23,7 +23,7 @@
       <p> {{description}}</p>
       <!-- <P v-show="instock">IN STOCK</P> -->
       <P v-if="instock > 10">IN STOCK</P>
-      <p v-if-else= "instock ">ALMOST OUT OF STOCK</p>
+      <!-- <p v-if-else= "instock <=10 && instock > 0">ALMOST OUT OF STOCK</p> -->
       <P v-else>OUT OF STOCK</P>
 
     </div>
