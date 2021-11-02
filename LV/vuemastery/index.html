@@ -25,7 +25,13 @@
       <P v-if="instock > 10">IN STOCK</P>
       <!-- <p v-if-else= "instock <=10 && instock > 0">ALMOST OUT OF STOCK</p> -->
       <P v-else>OUT OF STOCK</P>
+    <ul>
+      <li v-for='detail in details'>{{detail}}</li>
+    </ul>
 
+    <div v-for = "variant in variants" :key="variant.id"> {{variant.color}}</div>
+     <p>cart({{cart}})</p>
+    <button @click = "addToCart">add to cart</button>
     </div>
 
 
