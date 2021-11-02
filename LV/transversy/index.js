@@ -4,7 +4,7 @@ const app = Vue.createApp({
             firstName: 'diana',
             secondName: 'ndinda',
             email: 'dnyamai.dn@gmail.com',
-            picture: ''
+            picture: 'https://randomuser.me/api/portraits/men/10.jpg'
         }
     }
 })
