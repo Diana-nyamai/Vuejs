@@ -4,7 +4,7 @@ const app = Vue.createApp({
             cart: 0,
             product: 'shoes',
             description: 'shoes can be worn by any gender',
-            green: '../LV/green.jpg',
+            picture: './blue.jpg',
             img_descr: 'blue',
             instock: 100,
             details: ['50% off', '40% off', '30% off'],
