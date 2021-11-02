@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to right, #2e8654, #2b3c53);
+}
+body{
+    text-align: center;
+}

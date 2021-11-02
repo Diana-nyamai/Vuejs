@@ -9,17 +9,32 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-   
-    <div id="app">
-      <h1 style="text-align: center;">{{ product }}</h1>
+   <div class="header"></div>
+   <!-- end of the header -->
+
+   <div class="container">
+ <div class="product-image">
+   <img v-bind:src="green" v-bind:alt="img_descr">
+ </div>
+   </div>
+
+    <div id="application">
+      <h1 style="text-align: center;">{{product}}</h1>
+      <p> {{description}}</p>
+      <!-- <P v-show="instock">IN STOCK</P> -->
+      <P v-if="instock > 10">IN STOCK</P>
+      <p v-if-else= "instock ">ALMOST OUT OF STOCK</p>
+      <P v-else>OUT OF STOCK</P>
+
     </div>
 
 
+    
     <script src="./main.js"></script>
 
     <!-- mount app -->
    <script>
-     const mountedApp = app.mount('#app')
+     const mountedApp = app.mount('#application')
    </script>
 </body>
 </html>
