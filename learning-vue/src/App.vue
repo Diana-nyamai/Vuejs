@@ -18,13 +18,16 @@
 <h2 v-else-if="num < 0">this number is negative</h2>
 <h2 v-else-if="num > 0">this number is positive</h2>
 <h2 v-else>this is not a number</h2> the conditonal rendering-->
-<h1 v-for="(name,index) in names" :key="name">{{index}} {{name}}</h1>
+
+<!-- <h1 v-for="(name,index) in names" :key="name">{{index}} {{name}}</h1>
 <h1 v-for="name in fullNames" :key="name.first">{{name.first}} {{name.second}}</h1>
 
 <div v-for="actor in actors" :key="actor.name">
   <h3>{{actor.name}}</h3>
   <h4 v-for="movie in actor.movies" :key="movie" :style="movieColor">{{movie}}</h4>
-</div>
+</div> lists rendering-->
+
+
    </div>
 </template>
 
@@ -33,30 +36,31 @@ export default {
   name: 'App',
   data(){
     return{
-      names: ['diana', 'ndinda', 'nyamai'],
-      fullNames: [
-        {first: 'diana', second: 'nyamai'},
-         {first: 'princess', second: 'tiana'},
-          {first: 'queen', second: 'nyamai'}
+
+      // names: ['diana', 'ndinda', 'nyamai'],
+      // fullNames: [
+      //   {first: 'diana', second: 'nyamai'},
+      //    {first: 'princess', second: 'tiana'},
+      //     {first: 'queen', second: 'nyamai'}
         
-      ],
-      actors: [
-        {
-          name: 'lee minho',
-          movies: [ 'the king', 'legend of blue sea']
-        },
-        {
-          name: 'lee jong suk',
-          movies: ['pinnochio', 'w: two world apart']
-        },
-        {
-          name: 'suzy',
-          movies: ['startp', 'while you were sleeping']
-        }
-      ],
-      movieColor: {
-        color: 'red'
-      }
+      // ],
+      // actors: [
+      //   {
+      //     name: 'lee minho',
+      //     movies: [ 'the king', 'legend of blue sea']
+      //   },
+      //   {
+      //     name: 'lee jong suk',
+      //     movies: ['pinnochio', 'w: two world apart']
+      //   },
+      //   {
+      //     name: 'suzy',
+      //     movies: ['startp', 'while you were sleeping']
+      //   }
+      // ],
+      // movieColor: {
+      //   color: 'red'
+      // lists rendering}
 
     //  num: "diana" (conditonal rendering data)
     // {
@@ -74,6 +78,10 @@ export default {
       // logo: 'https://randomuser.me/api/portraits/men/10.jpg'
 //  the basics of vue data}
       }
+      }
+
+      methods: {
+
       }
 
 }
