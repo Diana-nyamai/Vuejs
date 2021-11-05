@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div>
+  <!-- <div>
     hello {{name}}
   </div>
   <h1 :id="greeting" class="underline">{{greeting}}</h1>
@@ -12,6 +12,12 @@
   <h3 :class="[ispromoted && 'promoted', issoldout? 'soldout': 'new']">aray of promoted movies</h3>
   <h4 :class="{promoted: ispromoted, new: !issoldout, soldout: issoldout}">checking the movies</h4>
 <div :style="hightlight">highight styling</div>
+<div><img :src="logo" alt="logo"></div> -->
+
+<h2 v-if="num === 0">this number is zero</h2>
+<h2 v-else-if="num < 0">this number is negative</h2>
+<h2 v-else-if="num > 0">this number is positive</h2>
+<h2 v-else>this is not a number</h2>
    </div>
 </template>
 
@@ -20,17 +26,19 @@ export default {
   name: 'App',
   data(){
     return{
-      name: 'ndinda',
-      channel: '<b>codeevolution</b>',
-      greeting: 'hello world',
-      disabled: false,
-      ispromoted: true,
-      issoldout: true,
-      hightlight: {
-        fontSize: '50px',
-        color: 'yellow',
-        padding: '30px'
-      }
+     num: "diana"
+      // name: 'ndinda',
+      // channel: '<b>codeevolution</b>',
+      // greeting: 'hello world',
+      // disabled: false,
+      // ispromoted: true,
+      // issoldout: true,
+      // hightlight: {
+      //   fontSize: '50px',
+      //   color: 'yellow',
+      //   padding: '30px'
+      // },
+      // logo: 'https://randomuser.me/api/portraits/men/10.jpg'
 
       }
       }
@@ -47,7 +55,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.underline{
+/* .underline{
   text-decoration: underline;
 }
 .promoted{
@@ -58,5 +66,5 @@ export default {
 }
 .soldout{
   color: red;
-}
+} */
 </style>
