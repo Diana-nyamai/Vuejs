@@ -30,6 +30,14 @@
 <h1>the sum of the numbers is: {{sum(2,3,4)}}</h1>
 <h1>the multiplactaion is: {{ multiply(3)}}</h1>
 
+<h1>{{name}}</h1>
+<button @click="name = 'kamama'">change name</button>
+
+<h1>{{count}}</h1>
+<div>
+  <button @click="increament">increament</button>
+  <button @click="decreament">decrement</button>
+</div>
    </div>
 </template>
 
@@ -38,6 +46,10 @@ export default {
   name: 'App',
   data(){
     return{
+      // event handling
+      name: 'jeremiah',
+      count: 0,
+//  methods
      baseMultiplier: 20
       // names: ['diana', 'ndinda', 'nyamai'],
       // fullNames: [
@@ -83,6 +95,12 @@ export default {
       },
 
       methods: {
+        increament(){
+          this.count += 1
+        },
+        decreament(){
+          this.count -= 1
+        },
         sum(a,b,c){
           return a + b + c
         },
