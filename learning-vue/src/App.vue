@@ -27,6 +27,8 @@
   <h4 v-for="movie in actor.movies" :key="movie" :style="movieColor">{{movie}}</h4>
 </div> lists rendering-->
 
+<h1>the sum of the numbers is: {{sum(2,3,4)}}</h1>
+<h1>the multiplactaion is: {{ multiply(3)}}</h1>
 
    </div>
 </template>
@@ -36,7 +38,7 @@ export default {
   name: 'App',
   data(){
     return{
-
+     baseMultiplier: 20
       // names: ['diana', 'ndinda', 'nyamai'],
       // fullNames: [
       //   {first: 'diana', second: 'nyamai'},
@@ -78,10 +80,15 @@ export default {
       // logo: 'https://randomuser.me/api/portraits/men/10.jpg'
 //  the basics of vue data}
       }
-      }
+      },
 
       methods: {
-
+        sum(a,b,c){
+          return a + b + c
+        },
+        multiply(num){
+          return num * this.baseMultiplier
+        }
       }
 
 }
