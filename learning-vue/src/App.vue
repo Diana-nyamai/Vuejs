@@ -31,7 +31,7 @@
 <h1>the multiplactaion is: {{ multiply(3)}}</h1>
 
 <h1>{{name}}</h1>
-<button @click="name = 'kamama'">change name</button>
+<button @click="changeName">change name</button>
 
 <h1>{{count}}</h1>
 <div>
@@ -95,6 +95,9 @@ export default {
       },
 
       methods: {
+        changeName(){
+           this.name = 'kamama'
+        },
         increament(){
           this.count += 1
         },
