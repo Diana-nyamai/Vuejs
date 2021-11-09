@@ -33,10 +33,10 @@
 <h1>{{name}}</h1>
 <button @click="changeName">change name</button>
 
-<h1>{{count}}</h1>
+<h1>{{volume}}</h1>
 <div>
-  <button @click="increament">increament</button>
-  <button @click="decreament">decrement</button>
+  <button @click="increament">volume +</button>
+  <button @click="decreament">volume -</button>
 </div>
    </div>
 </template>
@@ -50,7 +50,8 @@ export default {
       name: 'jeremiah',
       count: 0,
 //  methods
-     baseMultiplier: 20
+     baseMultiplier: 20,
+     volume: 0,
       // names: ['diana', 'ndinda', 'nyamai'],
       // fullNames: [
       //   {first: 'diana', second: 'nyamai'},
@@ -99,16 +100,23 @@ export default {
            this.name = 'kamama'
         },
         increament(){
-          this.count += 1
+          this.volume += 2
         },
         decreament(){
-          this.count -= 1
+          this.volume -= 2
         },
         sum(a,b,c){
           return a + b + c
         },
         multiply(num){
           return num * this.baseMultiplier
+        }
+      },
+      watch: {
+        volume(newValue){
+          if(newValue === 16){
+            alert('listening music too loud may damage your hearing')
+          }
         }
       }
 
