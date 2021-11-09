@@ -1,5 +1,6 @@
 <template>
 <div>
+  <Greet/>
   <!-- <div>
     hello {{name}}
   </div>
@@ -34,16 +35,21 @@
 <button @click="changeName">change name</button>
 
 <h1>{{volume}}</h1>
-<div>
-  <button @click="increament">volume +</button>
+<div> 
   <button @click="decreament">volume -</button>
+  <button @click="increament">volume +</button>
+ 
 </div>
    </div>
 </template>
 
 <script>
+import Greet from './components/Greet.vue'
 export default {
   name: 'App',
+  components:{
+     Greet,
+  },
   data(){
     return{
       // event handling
@@ -110,11 +116,11 @@ export default {
         },
         multiply(num){
           return num * this.baseMultiplier
-        }
+        },
       },
       watch: {
-        volume(newValue){
-          if(newValue === 16){
+        volume(newValue, oldValue){
+          if( newValue > oldValue && newValue === 16){
             alert('listening music too loud may damage your hearing')
           }
         }
