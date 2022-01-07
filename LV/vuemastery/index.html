@@ -18,7 +18,7 @@
  </div>
    </div>
 
-    <div id="application">
+    <div id="app">
       <h1 style="text-align: center;">{{product}}</h1>
       <p> {{description}}</p>
       <!-- <P v-show="instock">IN STOCK</P> -->
@@ -30,17 +30,14 @@
     </ul>
 
     <div v-for = "variant in variants" :key="variant.id"> {{variant.color}}</div>
-     <p>cart({{cart}})</p>
+     <p > <a href="addtocart.html"> cart({{cart}})</a></p>
     <button @click = "addToCart">add to cart</button>
+    <button @click="addToCart">add to cart</button>
     </div>
 
 
     
     <script src="./main.js"></script>
-
-    <!-- mount app -->
-   <script>
-     const mountedApp = app.mount('#application')
-   </script>
+  
 </body>
 </html>

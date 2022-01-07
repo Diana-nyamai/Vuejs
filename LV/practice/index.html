@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+    <title>practicing vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <h1>Practicing vue js</h1>
+    <div id="app">
+        <h2 style="text-align: center;"> hello my  {{name}}</h2>
+        <h3>i am {{age}} years old</h3>
+        <button @click="age++">increase my age</button>
+        <button @click="age--">descrease my age</button>
+        <button @click="changename('second name is ndinda')">change name</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
