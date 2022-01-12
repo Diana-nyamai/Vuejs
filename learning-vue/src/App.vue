@@ -53,7 +53,7 @@ export default {
   data(){
     return{
       // event handling
-      name: 'jeremiah',
+      name: 'deedee',
       count: 0,
 //  methods
      baseMultiplier: 20,
@@ -103,13 +103,13 @@ export default {
 
       methods: {
         changeName(){
-           this.name = 'kamama'
+           this.name = 'diana'
         },
         increament(){
-          this.volume += 2
+          this.volume += 1
         },
         decreament(){
-          this.volume -= 2
+          this.volume -= 1
         },
         sum(a,b,c){
           return a + b + c
